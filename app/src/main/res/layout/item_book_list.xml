@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginStart="@dimen/space_large"
+    android:layout_marginTop="@dimen/space_medium"
+    android:layout_marginEnd="@dimen/space_large"
+    android:layout_marginBottom="@dimen/space_medium"
+    android:background="?selectableItemBackground"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/space_large">
+
+        <TextView
+            android:id="@+id/tvBookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_marginTop="@dimen/space_medium"
+            android:layout_marginEnd="@dimen/space_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Book NameBook Name" />
+
+        <TextView
+            android:id="@+id/tvAuthorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_marginTop="@dimen/space_xsmall"
+            android:layout_marginEnd="@dimen/space_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBookName"
+            tools:text="Book's author" />
+
+        <TextView
+            android:id="@+id/tvBookDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_marginTop="@dimen/space_medium"
+            android:layout_marginEnd="@dimen/space_medium"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthorName"
+            tools:text="Book's description Book's description Book's description Book's description Book's description Book's description Book's description Book's description Book's description Book's description Book's description Book's description" />
+
+        <TextView
+            android:id="@+id/tvBookPublisher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_marginTop="@dimen/space_medium"
+            android:layout_marginEnd="@dimen/space_medium"
+            android:maxLines="1"
+            android:textColor="@color/text_color_light_gray"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Publisher: Wentworth Press" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

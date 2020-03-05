@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noResultLayout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNoResult"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:src="@drawable/no_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_result"
+            android:textColor="@color/text_color_gray"
+            app:layout_constraintEnd_toEndOf="@id/ivNoResult"
+            app:layout_constraintStart_toStartOf="@id/ivNoResult"
+            app:layout_constraintTop_toBottomOf="@id/ivNoResult" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "745028631345",
+    "firebase_url": "https://boocha-27943.firebaseio.com",
+    "project_id": "boocha-27943",
+    "storage_bucket": "boocha-27943.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745028631345:android:0af0a6cfdc372b74",
+        "android_client_info": {
+          "package_name": "com.boocha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745028631345-8m3c4mk367sq4fg623intj7t2u371qoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOkQxHOA4HvjJr0qa-gQJJDgw9JmGie-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745028631345-8m3c4mk367sq4fg623intj7t2u371qoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

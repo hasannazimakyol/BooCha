@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/gray_background"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/gray_background"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginTop="64dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimAnimationDuration="100">
+
+            <ImageView
+                android:id="@+id/ivBook"
+                android:layout_width="200dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                tools:src="@drawable/book" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:elevation="6dp"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/tvBookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold"
+                    tools:text="Book name" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:background="@color/gray_background"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="75dp">
+
+                <TextView
+                    android:id="@+id/tvBookDescriptionHelper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_xlarge"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:maxLines="1"
+                    android:text="@string/book_description"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBookDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookDescriptionHelper">
+
+                    <TextView
+                        android:id="@id/tvBookDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_large"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/text_small"
+                        tools:text="Book Description" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvOtherInformationsHelper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_xlarge"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:maxLines="1"
+                    android:text="@string/other_informations"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvBookDescription" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvOtherInformations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOtherInformationsHelper">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_large">
+
+                        <TextView
+                            android:id="@+id/tvAuthorName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Author: Author name" />
+
+                        <TextView
+                            android:id="@+id/tvBookPublisher"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvAuthorName"
+                            tools:text="Publisher: Publisher name" />
+
+                        <TextView
+                            android:id="@+id/tvPageCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvBookPublisher"
+                            tools:text="Page: 100" />
+
+                        <TextView
+                            android:id="@+id/tvPublishDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvPageCount"
+                            tools:text="Publish Date: 01.01.2019" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvOwnerDescriptionHelper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_xlarge"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:maxLines="1"
+                    android:text="@string/owner_s_description"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvOtherInformations" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvOwnerDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_large"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginEnd="@dimen/space_large"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOwnerDescriptionHelper">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutSwapOwner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_large">
+
+                        <TextView
+                            android:id="@+id/tvOwnerDescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Description: Book description by owner" />
+
+                        <TextView
+                            android:id="@+id/tvBookStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvOwnerDescription"
+                            tools:text="Book Status: Good" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUser"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/space_large"
+                            android:layout_marginEnd="@dimen/space_medium"
+                            app:civ_border_color="@color/gray_background"
+                            app:civ_border_width="0.5dp"
+                            app:layout_constraintEnd_toStartOf="@id/tvUsername"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvBookStatus" />
+
+                        <TextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivUser"
+                            app:layout_constraintTop_toBottomOf="@id/tvBookStatus"
+                            tools:text="Username" />
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/text_xsmall"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/tvUsername"
+                            app:layout_constraintTop_toBottomOf="@id/tvUsername"
+                            tools:text="one day ago" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnSendSwapRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_large"
+                    android:background="@drawable/border_solid_green_1dip"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/send_swap_request"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvOwnerDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

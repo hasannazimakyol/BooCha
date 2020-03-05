@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.boocha"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+
+final retrofitVersion = '2.3.0'
+final okHttpVersion = '3.9.1'
+final rxAndroidVersion = '2.0.1'
+
+final junitVersion = '4.12'
+final testRunnerVersion = '1.2.0'
+final espressoVersion = '3.2.0'
+
+final androidXAppcompat = '1.0.2'
+final androidXCore = '1.0.2'
+final androidXConstraintLayout = '1.1.3'
+final androidXRecyclerView = '1.0.0'
+final androidXCardView = '1.0.0'
+final androidXLifeCycle = '2.0.0'
+
+final glideVersion = '4.9.0'
+
+final firebaseCoreVersion = '17.0.0'
+final firebaseAuthVersion = '18.0.0'
+final firebaseFirestoreVersion = '20.1.0'
+final firebaseStorageVersion = '18.0.0'
+
+final eventBus = '3.1.1'
+
+final materialVersion = '1.1.0-alpha06'
+
+final circleImageViewVersion = '3.0.0'
+
+final imagePickerVersion = '1.13.1'
+
+final networkDependencies = [
+        retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+        retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+        retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+        rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+        okHttp3              : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+        okHttp3Logging       : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+]
+
+final testDependencies = [
+        junit : "junit:junit:${junitVersion}",
+        runner: "androidx.test:runner:${testRunnerVersion}",
+]
+
+final testİmplementation = [
+        espresso: "androidx.test.espresso:espresso-core:${espressoVersion}",
+]
+
+final androidXDependencies = [
+        core            : "androidx.core:core-ktx:${androidXCore}",
+        appcompat       : "androidx.appcompat:appcompat:${androidXAppcompat}",
+        constraintlayout: "androidx.constraintlayout:constraintlayout:${androidXConstraintLayout}",
+        recyclerview    : "androidx.recyclerview:recyclerview:${androidXRecyclerView}",
+        card            : "androidx.cardview:cardview:${androidXCardView}",
+        viewmodel       : "androidx.lifecycle:lifecycle-viewmodel:${androidXLifeCycle}",
+        extensions      : "androidx.lifecycle:lifecycle-extensions:${androidXLifeCycle}"
+]
+
+final imagesDependencies = [
+        implementation: "com.github.bumptech.glide:glide:${glideVersion}",
+]
+
+final imagesAnnotationProcessor = [
+        glideAnnotationProcessor: "com.github.bumptech.glide:compiler:${glideVersion}"
+]
+
+final firebaseDependencies = [
+        core     : "com.google.firebase:firebase-core:${firebaseCoreVersion}",
+        auth     : "com.google.firebase:firebase-auth:${firebaseAuthVersion}",
+        firestore: "com.google.firebase:firebase-firestore:${firebaseFirestoreVersion}",
+        storage  : "com.google.firebase:firebase-storage:${firebaseStorageVersion}"
+]
+
+final eventBusDependencies = [
+        eventBus: "org.greenrobot:eventbus:${eventBus}"
+]
+
+final materialDependencies = [
+        material: "com.google.android.material:material:${materialVersion}"
+]
+
+final circleImageViewDependencies = [
+        implementation: "de.hdodenhof:circleimageview:${circleImageViewVersion}"
+]
+
+final imagePickerDependencies = [
+        implementation: "com.github.esafirm.android-image-picker:imagepicker:${imagePickerVersion}"
+]
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation networkDependencies.values()
+
+    implementation testDependencies.values()
+
+    androidTestİmplementation testİmplementation.values()
+
+    implementation androidXDependencies.values()
+
+    implementation imagesDependencies.values()
+
+    annotationProcessor imagesAnnotationProcessor.values()
+
+    implementation firebaseDependencies.values()
+
+    implementation eventBusDependencies.values()
+
+    implementation materialDependencies.values()
+
+    implementation circleImageViewDependencies.values()
+
+    implementation imagePickerDependencies.values()
+}
