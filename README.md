@@ -28,6 +28,8 @@ EventBus is helpful for communication between fragments and activities. EventBus
 ## Design Pattern
 ### MVVM
 Model–view–viewmodel (MVVM) is a software architectural pattern.
-MVVM facilitates a separation of development of the graphical user interface  from development of the business logic or back-end logic (the data model). The view model of MVVM is a value converter, meaning the view model is responsible for exposing (converting) the data objects from the model in such a way that objects are easily managed and presented. 
+MVVM facilitates a separation of development of the graphical user interface  from development of the business logic or back-end logic (the data model). 
+
+The view model of MVVM is a value converter, meaning the view model is responsible for exposing (converting) the data objects from the model in such a way that objects are easily managed and presented. 
 ## Screenshots
 
