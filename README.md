@@ -33,4 +33,10 @@ MVVM facilitates a separation of development of the graphical user interface  fr
 The view model of MVVM is a value converter, meaning the view model is responsible for exposing (converting) the data objects from the model in such a way that objects are easily managed and presented. 
 ## Screenshots
 
-<img height="480px" src="app_images/1.png"> <img height="480px" src="app_images/2.png"> <img height="480px" src="app_images/3.png"> <img height="480px" src="app_images/4.png"> <img height="480px" src="app_images/5.png"> <img height="480px" src="app_images/6.png"> <img height="480px" src="app_images/7.png"> <img height="480px" src="app_images/8.png"> <img height="480px" src="app_images/9.png">
+<img height="480px" src="app_images/1.png"> <img height="480px" src="app_images/2.png"> <img height="480px" src="app_images/3.png"> 
+
+<img height="480px" src="app_images/4.png"> <img height="480px" src="app_images/5.png"> <img height="480px" src="app_images/6.png">
+
+<img height="480px" src="app_images/7.png"> <img height="480px" src="app_images/8.png"> <img height="480px" src="app_images/9.png">
+
+<img height="480px" src="app_images/10.png"> <img height="480px" src="app_images/11.png">
